@@ -1,0 +1,54 @@
+---
+layout: base.njk
+---
+
+<article>
+  <div class="title">{{ title }}</div>
+  <div class="tags">Tags: 
+      {% for tag in tags %}
+        <span class="tag"><a href="/tags/{{ tag }}/">{{ tag }}</a></span>
+      {% endfor %}
+  </div>
+  <p class="description">{{ description }}</p>
+  <div class="meta-row">
+    <div class="meta-cell"><span class="val">{{ prep_time }}'</span><span class="lbl">Prep</span></div>
+    <div class="meta-cell"><span class="val">{{ cooking_time }}</span><span class="lbl">Cooking</span></div>
+    <div class="meta-cell"><span class="val">{{ servings }}</span><span class="lbl">Serves</span></div>
+    <div class="meta-cell"><span class="val">{{ difficulty }}</span><span class="lbl">Difficulty</span></div>
+  </div>
+
+  <div class="section-label">Ingredients</div>
+  <ul class="ingredient-list">
+    {% for ingredient in ingredients %}
+
+    <li class="{{ "odd" if loop.index is odd else "" }}">
+      <span class="ing-name">{{ ingredient.name }}</span>
+      <span class="ing-qty">{{ ingredient.qty }}</span>
+    </li>
+    {% endfor %}
+
+  </ul>
+
+  <hr class="divider">
+
+  <div class="section-label">Steps</div>
+  <ol class="steps-list">
+    {% for step in instructions %}
+    <li class="step">
+      <span class="step-num">{{ loop.index }}</span>
+      <p class="step-text">{{ step }}</p>
+    </li>
+    {% endfor %}
+  </ol>
+  {% if tip %}
+  <div class="tip-box">
+    {{ tip }}
+  </div>
+  {% endif %}
+  {% if source %}
+  <hr class="divider">
+    <div class="source">
+      Source: <a href="{{ source }}" target="_blank">{{ source }}</a>
+    </div>
+  {% endif %}
+</article>

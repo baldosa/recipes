@@ -1,0 +1,18 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+permalink: /tags/{{ tag }}/
+layout: base.njk
+---
+<div class="title">Tagged: {{ tag }}</div>
+
+<ul class="recipe-list">
+{% set taglist = collections[ tag ] %}
+  {% for post in taglist | reverse %}
+    <li>
+      <a href="{{ post.url }}">{{ post.data.title }}</a>
+    </li>
+  {% endfor %}
+</ul>

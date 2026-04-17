@@ -1,0 +1,24 @@
+{
+  "name": "recipes",
+  "version": "1.0.0",
+  "description": "personal recipe book",
+  "homepage": "https://github.com/baldosa/recipes#readme",
+  "bugs": {
+    "url": "https://github.com/baldosa/recipes/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baldosa/recipes.git"
+  },
+  "license": "GPL-3.0-or-later",
+  "author": "Ema Guillén",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.5"
+  }
+}
