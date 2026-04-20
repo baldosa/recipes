@@ -22,7 +22,13 @@ layout: base.njk
     {% for ingredient in ingredients %}
 
     <li class="{{ "odd" if loop.index is odd else "" }}">
-      <span class="ing-name">{{ ingredient.name }}</span>
+      <span class="ing-name">
+        {% if ingredient.link %}
+          <a class="subrecipe-link" href="/recipes/{{ ingredient.link }}">{{ ingredient.name }}</a>
+        {% else %}
+          {{ ingredient.name }}
+        {% endif %}
+      </span>
       <span class="ing-qty">{{ ingredient.qty }}</span>
     </li>
     {% endfor %}
@@ -46,7 +52,6 @@ layout: base.njk
   </div>
   {% endif %}
   {% if source %}
-  <hr class="divider">
     <div class="source">
       Source: <a href="{{ source }}" target="_blank">{{ source }}</a>
     </div>
