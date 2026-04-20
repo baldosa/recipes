@@ -21,7 +21,7 @@ ingredients:
     name: meringue
     link: meringue
 instructions:
-  - Put the custard on a cold shell
+  - Put the custard on a cooled shell
   - Cover with meringue
   - Use a torch on the meringue 
 ---

@@ -26,6 +26,8 @@ ingredients:
     name: salt
   - qty: 410g
     name: bread flour
+  - qty: 45g
+    name: melted and cooled butter
 
 instructions:
   - Add your yeast and mix together all wet ingredients in a bowl. Whisk the egg before combining.

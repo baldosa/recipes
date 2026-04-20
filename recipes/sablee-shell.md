@@ -27,5 +27,5 @@ instructions:
   - Using a rolling pin, roll out the dough to a thickness of 5 cm and place it in a 24cm pan. With a fork, prick it.
   - Put it in the pan on the freezer for 15 minutes. 
   - Cook in a preheated oven at 180C for 15 minutes
-  - Let it cold in the pan.
+  - Let it cool down in the pan.
 ---
